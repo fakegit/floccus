@@ -20,7 +20,7 @@ export class Bookmark {
 
     try {
       new URL(url)
-      this.url = normalizeUrl(url)
+      this.url = url.href
     } catch (e) {
       Logger.log('Failed to normalize', url)
       this.url = url
